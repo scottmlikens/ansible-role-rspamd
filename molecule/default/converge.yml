@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  pre_tasks:
+    - name: Update apt cache
+      apt: update_cache=true cache_valid_time=600
+      when: ansible_os_family == 'Debian'
+
+  tasks:
+    - name: "Include redis"
+      include_role:
+        name: "geerlingguy.redis"
+    - name: "Include rspamd"
+      include_role:
+        name: "rspamd"

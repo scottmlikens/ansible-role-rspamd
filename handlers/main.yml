@@ -1,0 +1,8 @@
+---
+- name: restart rspamd
+  become: true
+  service:
+    name: rspamd
+    state: restarted
+  tags:
+    - rspamd_run

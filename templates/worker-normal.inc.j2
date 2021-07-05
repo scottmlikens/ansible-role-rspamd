@@ -1,0 +1,9 @@
+allow_learn = "{{ rspamd_allow_learn }}";
+{% if rspamd_encryption_enabled == True %}
+keypair {
+    pubkey = "{{ rspamd_pubkey }}";
+    privkey = "{{ rspamd_privkey }}";
+}
+{% else %}
+# keypair
+{% endif %}

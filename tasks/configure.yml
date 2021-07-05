@@ -1,0 +1,24 @@
+- name: configure rspamd normal worker
+  template:
+    src: worker-normal.inc.j2
+    dest: /etc/rspamd/local.d/worker-normal.inc
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart rspamd
+- name: configure rspamd proxy
+  template:
+    src: worker-proxy.inc.j2
+    dest: /etc/rspamd/local.d/worker-proxy.inc
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart rspamd
+- name: configure rspamd controller
+  template:
+    src: worker-controller.inc.j2
+    dest: /etc/rspamd/local.d/worker-controller.inc
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart rspamd

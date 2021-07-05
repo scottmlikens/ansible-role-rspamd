@@ -1,0 +1,7 @@
+---
+rspamd_dependencies: ["apt-transport-https", "ca-certificates", "gpg-agent"]
+rspamd_packages: ["rspamd"]
+rspamd_allow_learn: "false"
+rspamd_encryption_enabled: False
+rspamd_pubkey: ""
+rspamd_privkey: ""
