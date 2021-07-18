@@ -1,4 +1,6 @@
 ---
+rspamd_controller_pass: "passw0rd"
+rspamd_enable_pass: "passw0rd"
 rspamd_dependencies: ["apt-transport-https", "ca-certificates", "gpg-agent"]
 rspamd_packages: ["rspamd"]
 rspamd_allow_learn: "false"
